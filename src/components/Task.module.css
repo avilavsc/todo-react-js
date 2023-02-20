@@ -1,0 +1,76 @@
+.task {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.task + .task {
+  margin-top: 0.75rem;
+}
+
+.taskBody {
+  display: flex;
+}
+
+.taskCheckbox {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 12px;
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.taskCheckbox:hover {
+  background-color: var(--blue-dark);
+}
+
+.taskCheckbox:checked {
+  background-color: var(--purple-dark);
+  text-align: center;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+}
+
+.taskCheckbox:checked:hover {
+  background-color: var(--purple);
+}
+
+.taskCheckbox:checked::before {
+  color: var(--white);
+  content: "\2714";
+}
+
+.content {
+  color: var(--gray-100)
+}
+.completed{
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.trashButton {
+  background-color: transparent;
+  border: none;
+  color: var(--gray-300);
+  cursor: pointer;
+  margin-left: 12px;
+  padding: 0.3125rem;
+}
+
+.trashButton:hover {
+  background-color: var(--gray-400);
+  color: var(--red);
+  border-radius: 4px;
+}
